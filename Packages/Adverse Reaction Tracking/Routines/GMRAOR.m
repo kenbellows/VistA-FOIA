@@ -76,7 +76,7 @@ DRCL(CODE) ;return any rxn's in GMRADRCL(
  S CLSFN=$$CODE2CL^GMRAPENC(CODE)
  S GMRADRCL(J)=CODE_"^"_CLSFN_$$FAC(^TMP("GMRAOC",$J,"APC",CODE))
  S FLG=2
- Q 
+ Q
 ING(DFN,PTR) ; Subroutine checks for Drug Ingredients, returns:
  ;                  If found FLG= 1 with GMRAIEN Array Drug Ingredients
  ;                 Not found FLG= 0
@@ -103,7 +103,7 @@ GETDATA(DFN) ;Obtain local and HDR related allergy data for use in order checkin
  ;^TMP("GMRAOC",$J,"APC",K)="" where K is the drug class classification (e.g. MS105)
  ;
  F  L +^XTMP("GMRAOC",DFN):1 Q:$T
- K ^XTMP("GMRAOC",DFN) 
+ K ^XTMP("GMRAOC",DFN)
  D REMOTE(DFN),LOCAL(DFN)
  K ^TMP("GMRAOC",$J)
  M ^TMP("GMRAOC",$J)=^XTMP("GMRAOC",DFN)
